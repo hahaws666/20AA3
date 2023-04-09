@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 外部引用，目前最新的是4.3.1，使用的前提是必须联网 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- 这两个注释掉的是其他的加速网址，按需开放 -->
+    <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="../static/css/reg.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section class="vh-100 bg-image"
+  style="background-image: url('https://www.humanitariancoalition.ca/sites/default/files/styles/max_1300x1300/public/images/primary/web%20banner%20en.jpg?itok=elal2CRU');background-repeat: no-repeat;background-size: cover ">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              {% block content %}
+
+
+
+              {% endblock %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
+

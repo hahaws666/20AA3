@@ -1,0 +1,14 @@
+{% extends 'logmod.html' %}
+{% block content %}
+    <form action="/api/logout">
+        <h2 class="text-uppercase text-center mb-5">
+            You have successfully logged out
+        </h2>
+        <button type="submit"
+                methods="POST">
+            BACK TO MAIN PAGE
+        </button>
+    </form>
+
+
+{% endblock %}

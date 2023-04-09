@@ -1,0 +1,14 @@
+{% extends 'logmod.html' %}
+{% block content %}
+              <h2 class="text-uppercase text-center mb-5">thank for your support</h2>
+                <form action="/api/logout" method="POST">
+                    <button type="submit">
+                        log out
+                    </button>
+                </form>
+                <form action="/api/back">
+                    <button type="submit">
+                        back to main page
+                    </button>
+                </form>
+{% endblock %}

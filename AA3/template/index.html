@@ -1,0 +1,107 @@
+{% extends 'indexmode.html' %}
+{% block content %}
+<script src="/static/js/cycle.js"></script>
+<script>
+$(document).ready(function(){
+    $(".menuBar li").hover(function () {
+        $(this).find("a").first().addClass("hover");
+        $(this).find("ul").first().fadeIn(200);
+    }, function () {
+        $(this).find("a").first().removeClass("hover");
+        $(this).find("ul").first().fadeOut(200);
+    });
+});
+</script>
+        <div class="cycle">
+            <ul>
+                <li><img src="https://images.pexels.com/photos/11421405/pexels-photo-11421405.jpeg" /></li>
+                <li><img src="https://images.pexels.com/photos/11421332/pexels-photo-11421332.jpeg" /></li>
+                <li><img src="https://images.pexels.com/photos/12167207/pexels-photo-12167207.jpeg" /></li>
+                <li><img src="https://images.pexels.com/photos/11421084/pexels-photo-11421084.jpeg" /></li>
+                <li><img src="https://images.pexels.com/photos/11421247/pexels-photo-11421247.jpeg" /></li>
+
+            </ul>
+            <img src="https://www.qingpufdfz.cn/images/prev.png" class="prev" />
+            <img src="https://www.qingpufdfz.cn/images/next.png" class="next" />
+        </div>
+
+        <div class="center">
+            <div class="intro">
+                <div>
+                    <b>looking forward for your support</b>
+
+                </div>
+                <ul>
+
+                            <li>
+                                <b>
+                                    <a target="_blank" rel="noopener noreferrer" title="heading" >
+                                        Donate to Ukraine Emergency Relief Efforts
+                                    </a>
+                                </b>
+
+                                <p>This February marks the one year anniversary of the war in Ukraine, and your help is still needed more than ever. With no end in sight, the people of Ukraine continue to face ongoing food and water shortages, risk of physical injury, lack of medical care, and safe shelter.
+
+Donate to help Canadian charities provide urgent aid to those impacted by the war, including Ukrainian refugees who fled their homes with few resources. You can provide medical aid, protect children’s welfare, supply safe drinking water, food, and shelter, support millions of refugees, and provide other life-saving support.
+
+Charities are struggling with declining donations to support relief efforts in Ukraine – an 80% decrease compared to the first six months of the war. Your donations can help charities provide critical aid needed to survive this humanitarian crisis.</p>
+
+                            </li>
+
+
+
+                </ul>
+            </div>
+            <div class="OA">
+                <div>
+                    <b>contact us</b>
+                </div>
+                <ul>
+                                <a >
+                                    000-000-0000
+                                    <br>
+                                    1295 Militaray Trail ,Scarborough, ON
+                                </a>
+                </ul>
+            </div>
+            <div class="link">
+                <a target="_blank" rel="noopener noreferrer" href="{{url_for('login')}}">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2250/2250092.png" />
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="{{url_for('contact')}}">
+                    <img src="data:image/png;base64,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" />
+                </a>
+                                <a target="_blank" rel="noopener noreferrer" href="{{url_for('register')}}">
+                                    <img src='https://pic.onlinewebfonts.com/svg/img_180671.png'>
+                </a>
+            </div>
+        </div>
+<script src="/static/js/cyclemin.js"></script>
+<script>
+$(document).ready(function(){
+    $(".cycle").hover(function () {
+        $(".prev").fadeIn(200);
+        $(".next").fadeIn(200);
+    }, function () {
+        $(".prev").fadeOut(200);
+        $(".next").fadeOut(200);
+    });
+    $(".cycle ul").cycle({
+        fx: 'fade'
+        , speed: 600
+        , timeout: 3000
+        , prev: '.prev'
+        , next: '.next'
+    });
+    $(".slider ul").cycle({
+        fx: "fade"
+        , speed: 600
+        , timeout: 4000
+        , pager: ".slider ol"
+        , pagerAnchorBuilder: function (i, pic) {
+            return '<li>' + (i + 1) + '</li>';
+        }
+    });
+});
+</script>
+{% endblock %}

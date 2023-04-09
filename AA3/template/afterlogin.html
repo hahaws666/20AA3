@@ -1,0 +1,34 @@
+{% extends 'logmod.html' %}
+
+{% block content %}
+        {% if session.user %}
+        <h2 class="text-uppercase text-center mb-5" xmlns="http://www.w3.org/1999/html">hello {{ session.user }}</br></h2>
+        <p>
+            <br>
+                your total amount payment is {{session.total}}
+            </br>
+        </p>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">donate for children</a></button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">donate for rebuilding society</a> </button>
+        </div>
+            <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">donate for the poor</a></button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" ><a href="{{url_for('paying')}}">track for my donation</a></button>
+        </div>
+        {% else %}
+        <div>
+    <p class="text-center text-muted mt-5 mb-0">
+        <a href='{{url_for("login")}}'
+           class="fw-bold text-body">
+            <u>please log in first</u>
+        </a>
+    </p>
+    </div>
+        {% endif %}
+
+{% endblock %}
